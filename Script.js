@@ -5,7 +5,7 @@ var Loader = document.getElementById("status");
  function load(){
     event.preventDefault();
     moviesContainer.innerHTML = ""
-    Loader.innerHTML = "<progress> </progress>"
+    Loader.innerHTML = "<img src='https://i0.wp.com/codemyui.com/wp-content/uploads/2017/07/fidget-spinner-loading.gif?fit=880%2C440&ssl=1'>"
    let xhttp =  new XMLHttpRequest();
    xhttp.onreadystatechange = function(){
     if(this.readyState == 4){
@@ -23,7 +23,7 @@ var Loader = document.getElementById("status");
             </div>`
          } )
         }else{
-            movieStatusElement.innerText =`No Results for ${MovieName.value}`
+            Loader.innerText =`No Results for ${MovieName.value}`
         }
     }
    }
